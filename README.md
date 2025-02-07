@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# Superhero Registry
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project consists of a simple Node.js API and a React frontend (styled with Tailwind CSS) that allows users to add superheroes (with their name, superpower, and a humility score) and view them sorted by humility in descending order.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Backend
 
-## Expanding the ESLint configuration
+- **Endpoints:**
+  - `POST /superheroes`: Add a new superhero.
+  - `GET /superheroes`: Get the list of superheroes sorted by humility.
+- **Validation:** Ensures that the humility score is a number between 1 and 10.
+- **Testing:** Includes Jest tests using Supertest.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Frontend
 
-- Configure the top-level `parserOptions` property like this:
+- **Built with React and Tailwind CSS.**
+- Provides a form to add new superheroes.
+- Displays the superheroes list in real time.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## How I Would Collaborate with a Teammate
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+I believe in clear communication and code reviews. I would:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Use version control** (Git and GitHub) to manage changes.
+- **Write clear commit messages** and use feature branches.
+- **Hold regular code reviews** to discuss improvements.
+- **Pair-program** on complex parts to share knowledge.
+- **Maintain comprehensive documentation** so everyone is on the same page.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## If I Had More Time
+
+- **Persist Data:** Switch from an in-memory array to a real database (e.g., MongoDB or PostgreSQL or Firebase).
+- **Improve Error Handling:** Add more robust error handling and logging.
+- **Authentication:** Implement user authentication to restrict certain actions.
+- **UI Enhancements:** Enhance the frontend design with more interactive elements.
+- **Unit & Integration Testing:** Expand test coverage for both backend and frontend.
+- **Deployment:** Prepare Docker containers for easier deployment and scalability.

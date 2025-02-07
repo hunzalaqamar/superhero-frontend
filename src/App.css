@@ -13,7 +13,6 @@ body,
 
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #f7fafc;
 }
 
 .container {
@@ -23,17 +22,21 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 1rem;
   padding: 1.5rem;
   margin: 1rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  color: #333;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
 }
 
 .button {
